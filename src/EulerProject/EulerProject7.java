@@ -1,21 +1,22 @@
 package EulerProject;
 
-import java.math.BigInteger;
 
-public class EulerProject10 {
+public class EulerProject7 {
 
 	public static void main(String[] args) {
-		long sum = 0;
-		for (int i = 0; i < 2000000; i++) {
-			if (isPrime(i))
-				sum += i;
+		int primeCounter = 0;
+		double num = 0;
+		while (primeCounter < 10001) {
+			num++;
+			if (isPrime(num)) {
+				primeCounter += 1;
+			}
 
 		}
-
-		System.out.println(sum);
+		System.out.println(num);
 	}
 
-	public static boolean isPrime(int num) {
+	public static boolean isPrime(double num) {
 		if (num <= 1)
 			return false;
 		else if (num <= 3)
@@ -31,6 +32,7 @@ public class EulerProject10 {
 			i += 6;
 		}
 		return true;
+
 	}
 
 }

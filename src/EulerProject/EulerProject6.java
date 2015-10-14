@@ -1,5 +1,6 @@
 package EulerProject;
 
+
 public class EulerProject6 {
 
 	public static void main(String[] args) {
