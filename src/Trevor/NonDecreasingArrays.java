@@ -1,3 +1,4 @@
+package Trevor;
 /**
  * @url https://www.codechef.com/OCT15/problems/SUBINC
  */
