@@ -1,5 +1,9 @@
 package charles;
-
+/*
+ * link: https://www.codechef.com/problems/TSORT
+ * 
+ * NOTE: this solution is too slow
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
