@@ -1,5 +1,11 @@
 package charles;
 
+/**
+ * link: https://www.codechef.com/problems/TLG
+ * 
+ * NOTE: this yields the wrong answer
+ * however, with the given test data, it yields the correct answer
+ */
 import java.util.Scanner;
 
 class TheLeadGame {

@@ -1,5 +1,7 @@
 package charles;
-
+/**
+ * @url https://www.codechef.com/problems/FCTRL
+ */
 import java.util.Scanner;
 
 class Factorial {
