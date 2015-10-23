@@ -1,6 +1,6 @@
 package charles;
-/*
- * link: https://www.codechef.com/problems/INTEST
+/**
+ * @url https://www.codechef.com/problems/INTEST
  */
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 package charles;
-/*
- * link: https://www.codechef.com/problems/FCTRL
+/**
+ * @url https://www.codechef.com/problems/FCTRL
  */
 import java.util.Scanner;
 

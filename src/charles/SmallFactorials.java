@@ -1,6 +1,6 @@
 package charles;
-/*
- * link: https://www.codechef.com/problems/FCTRL2
+/**
+ * @url https://www.codechef.com/problems/FCTRL2
  */
 import java.math.BigInteger; // needed due to number sizes
 import java.util.Scanner;

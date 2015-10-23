@@ -1,6 +1,6 @@
 package charles;
 
-/*
+/**
  * link: https://www.codechef.com/problems/TLG
  * 
  * NOTE: this yields the wrong answer
