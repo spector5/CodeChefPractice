@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 /**
  * @url https://www.codechef.com/problems/HOLES
- * NOTE: this yields the wrong answer
  */
 class HolesInTheText {
 
@@ -37,6 +36,7 @@ class HolesInTheText {
 		case 'D':
 		case 'O':
 		case 'P':
+		case 'Q':
 		case 'R':// these are all the same
 			return 1;
 		case 'B':
