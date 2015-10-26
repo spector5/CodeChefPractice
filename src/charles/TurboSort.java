@@ -1,4 +1,5 @@
 package charles;
+
 /**
  * link: https://www.codechef.com/problems/TSORT
  */
@@ -13,7 +14,7 @@ class TurboSort {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// setup
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		//PrintWriter out = new PrintWriter(System.out, true);
+		// PrintWriter out = new PrintWriter(System.out, true);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 		// input
 		int t = Integer.parseInt(in.readLine()); // num items
@@ -28,9 +29,10 @@ class TurboSort {
 			/*
 			 * this is SIGNIFICANTLY faster than System.out.print() for output
 			 */
-			out.write((nums[i] + "\n"));
+			out.write(nums[i] + "\n");
 		}
 		// cleanup
-		out.flush();
+		out.flush();// sends output to console
+		out.close();
 	}
 }
