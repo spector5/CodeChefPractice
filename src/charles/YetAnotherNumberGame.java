@@ -9,7 +9,7 @@ import java.io.OutputStreamWriter;
 /**
  * link: https://www.codechef.com/problems/NUMGAME
  * 
- * @author 5donuts
+ * Need to figure out how to do this problem
  *
  */
 class YetAnotherNumberGame {
