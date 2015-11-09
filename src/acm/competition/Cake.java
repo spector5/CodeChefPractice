@@ -84,7 +84,7 @@ public class Cake {
 					relation += (gender == 'M') ? "uncle" : "aunt";
 				}
 
-			} else if (k1Path == 2 && k2Path <= 5) { //Fix cousins
+			} else if (k1Path == 2 && k2Path <= 5) { 
 
 				relation = cousin[0] + "cousin " + removed[k2Path - 2];
 
@@ -97,6 +97,8 @@ public class Cake {
 				relation = cousin[2] + "cousin " + removed[k2Path - 4];
 
 			}
+			else
+				relation = "kin";
 
 			System.out.println(relation);
 
