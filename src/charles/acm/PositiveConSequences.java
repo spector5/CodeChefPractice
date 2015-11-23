@@ -67,15 +67,19 @@ public class PositiveConSequences {
 		int[] array = new int[4]; // array to hold values
 		int missingVal, missingIndex; // the missing value
 
-		// actions
-		do {
-			// read in values
-			input = in.readLine().split(" ");
+		/*
+		 * get program input
+		 */
+		// read in values
+		input = in.readLine().split(" ");
 
-			// parse the values to integers
-			for (int i = 0; i < array.length; i++) {
-				array[i] = Integer.parseInt(input[i]);
-			}
+		// parse the values to integers
+		for (int i = 0; i < array.length; i++) {
+			array[i] = Integer.parseInt(input[i]);
+		}
+
+		// do the thing
+		while (inputIsGood(array)) {
 
 			// find the index of the missing number
 			missingIndex = getMissingNumberIndex(array);
@@ -92,7 +96,18 @@ public class PositiveConSequences {
 			// write value to buffer
 			out.write(String.format("%d\n", missingVal));
 
-		} while (inputIsGood(array));
+			/*
+			 * get the input for the program
+			 */
+			// read in values
+			input = in.readLine().split(" ");
+
+			// parse the values to integers
+			for (int i = 0; i < array.length; i++) {
+				array[i] = Integer.parseInt(input[i]);
+			}
+
+		}
 
 		// flush output buffer
 		out.flush();
@@ -111,17 +126,22 @@ public class PositiveConSequences {
 	 */
 	private static int getMissingArithmetic(int[] array, int missingNumberIndex) {
 		// variables
-		int val = -1;
+		int val = -1; // the missing value
+		int constant; // the series constant
 
-		// determine missing value
+		// determine series constant & determine missing value
 		if (missingNumberIndex == 0) {
-			val = array[2] = array[1];
+			constant = array[2] = array[1];
+			val = array[1] - constant;
 		} else if (missingNumberIndex == 1) {
-			val = array[3] - array[2];
+			constant = array[3] - array[2];
+			val = array[0] + constant;
 		} else if (missingNumberIndex == 2) {
-			val = array[1] - array[0];
-		} else {// missingNumberIndex == 3
-			val = array[2] - array[1];
+			constant = array[1] - array[0];
+			val = array[1] + constant;
+		} else {// missingIndex == 3
+			constant = array[2] - array[1];
+			val = array[2] + constant;
 		}
 
 		// validate value
@@ -144,24 +164,29 @@ public class PositiveConSequences {
 	 */
 	private static int getMissingGeometric(int[] array, int missingNumberIndex) {
 		// variables
-		int val = -1;
+		int val = -1; // the missing value
+		int constant; // the series constant
 
-		// determine missing value
-		if (missingNumberIndex == 0) { // TODO handle fraction case
-			val = array[2] / array[1];
+		// determine the series constant and the missing vlaue
+		if (missingNumberIndex == 0) {
+			constant = array[2] / array[1];
+			val = array[1] / constant;
 		} else if (missingNumberIndex == 1) {
-			val = array[3] / array[2];
+			constant = array[3] / array[2];
+			val = array[0] * constant;
 		} else if (missingNumberIndex == 2) {
-			val = array[1] / array[0];
+			constant = array[1] / array[0];
+			val = array[1] * constant;
 		} else {// missingIndex==3
-			val = array[1] / array[0];
+			constant = array[1] / array[0];
+			val = array[2] * constant;
 		}
 
 		// validate value
 		val = (val >= 1 && val <= 1000000 && val == (int) Math.floor(val)) ? (int) Math.floor(val) : -1;
 
 		// return value
-		return val;
+		return constant;
 	}
 
 	/**
