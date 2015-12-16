@@ -19,5 +19,7 @@ class SmallFactorials {
 			}
 			System.out.println(fact);
 		}
+		// cleanup
+		s.close();
 	}
 }
