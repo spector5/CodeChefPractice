@@ -8,9 +8,6 @@ import java.io.OutputStreamWriter;
 
 /**
  * link: https://www.codechef.com/problems/NUMGAME
- * 
- * Need to figure out how to do this problem
- *
  */
 class YetAnotherNumberGame {
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -19,39 +16,19 @@ class YetAnotherNumberGame {
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 		int t; // test cases
 		int n; // number to be examined in each case
-		int turn; // turn counter
 		// input
-		t = Integer.parseInt(in.readLine()); // test cases
-		// actions
-		/*
-		 * need to really think about how to play this game first
-		 */
-		// for (int i = 0; i < t; i++) {
-		// n = Integer.parseInt(in.readLine());
-		// turn = 0; // alice goes on even turns
-		// while (n > 8) {
-		// if (turn % 2 == 0) {
-		// // alice's turns
-		// if (n % 2 == 0) {
-		// n--;// optimal play for even number
-		// } else {
-		// n--; // need to determine optimal play
-		// }
-		// } else {
-		// // bob's turns
-		// if (n % 2 == 0) {
-		// n--; // optimal play for even number
-		// } else {
-		// n--; // need to determine optimal play
-		// }
-		// }
-		// turn++;
-		// }
-		// }
+		t = Integer.parseInt(in.readLine());
+		// for each test case
+		for (int i = 0; i < t; i++) {
+			// get value for test case
+			n = Integer.parseInt(in.readLine());
+			out.write((n % 2 == 0) ? "ALICE" : "BOB");
+			out.write("\n");
+		}
 		// output
 		out.flush();
 		// cleanup
+		in.close();
 		out.close();
-
 	}
 }
