@@ -63,6 +63,10 @@ class CoolingPies {
 		int val = 0;
 		int piesRem = p.length;
 		/*
+		 * TODO think of a way to do this in a MUCH MORE SIMPLE MANNER. also:
+		 * try to understand how the author's solution works
+		 */
+		/*
 		 * actions
 		 */
 		// while there are still pies
@@ -71,6 +75,7 @@ class CoolingPies {
 			// if none of racks can hold pie, stop
 			// of racks that CAN hold pie, choose lightest
 			// if there are no more pies, stop
+			break;
 		} while (true);
 		/*
 		 * return
