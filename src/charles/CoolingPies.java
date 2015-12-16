@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
 /**
  * @url https://www.codechef.com/problems/COOLING
@@ -19,31 +20,61 @@ class CoolingPies {
 		// input
 		int t = Integer.parseInt(in.readLine()); // test cases
 		int n; // number if pies & racks for each test case
+		int good; // the number of pies which can be cooled on racks
 		int[] pies; // pies array
 		int[] racks; // racks array
-		// actions
-		/*
-		 * gets pie and rack weights
-		 */
+		String[] tmp; // for reading input
+		// actions for each test case
 		for (int i = 0; i < t; i++) {
-			n = Integer.parseInt(in.readLine());
+			/*
+			 * read input
+			 */
+			n = Integer.parseInt(in.readLine()); // num pies/racks
 			pies = new int[n];
 			racks = new int[n];
-			// reads pie weights
+			// get pie weights
+			tmp = in.readLine().split(" ");
+			// parse pie weights
 			for (int j = 0; j < n; j++) {
-				pies[j] = Integer.parseInt(in.readLine());
+				pies[j] = Integer.parseInt(tmp[j]);
 			}
-			// reads rack weights
+			// get rack weights
+			tmp = in.readLine().split(" ");
+			// parse rack weights
 			for (int j = 0; j < n; j++) {
-				racks[j] = Integer.parseInt(in.readLine());
+				racks[j] = Integer.parseInt(tmp[j]);
 			}
+			/*
+			 * sort arrays
+			 */
+			Arrays.sort(pies);
+			Arrays.sort(racks);
 		}
-		/*
-		 * determine how many pies can fit on each rack
-		 */
 		// output
 		out.flush();
 		// cleanup
 		out.close();
+	}
+
+	private static int getNumPies(int[] p, int[] r) {
+		/*
+		 * variables
+		 */
+		int val = 0;
+		int piesRem = p.length;
+		/*
+		 * actions
+		 */
+		// while there are still pies
+		do {
+			// choose lightest pie not on rack
+			// if none of racks can hold pie, stop
+			// of racks that CAN hold pie, choose lightest
+			// if there are no more pies, stop
+		} while (true);
+		/*
+		 * return
+		 */
+		return val;
 	}
 }
