@@ -20,8 +20,6 @@ class CountOfMaximum {
 		int t; // test cases
 		int n; // length of array
 		int[] a; // the array
-		int v; // value
-		int c; // count
 		// read input
 		t = Integer.parseInt(in.readLine());
 		/*

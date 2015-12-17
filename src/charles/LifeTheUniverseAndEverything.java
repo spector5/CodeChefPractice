@@ -15,6 +15,7 @@ class LifeTheUniverseAndEverything {
 			if (num != 42) {
 				System.out.println(num);
 			} else {
+				s.close();
 				System.exit(0);
 			}
 		}
